@@ -35,7 +35,7 @@ ingredients_list = st.multiselect(
 
 if ingredients_list:
     
-    ingredients_string = " "
+    ingredients_string = ""
 
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen + " "
@@ -63,6 +63,10 @@ if ingredients_list:
     if time_to_insert:
         session.sql(my_insert_stmt).collect()
         st.success(f'Your Smoothie is ordered, {name_on_order}!', icon="✅")
+
+
+
+
 
 
 
